@@ -7,6 +7,7 @@ enum InputType {
     OTHER
 };
 
+
 int main() {
     std::cout << "Hello and welcome to my FOSS c++ sqlite clone!\n";
     std::string input;
