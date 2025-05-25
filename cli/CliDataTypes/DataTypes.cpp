@@ -3,10 +3,10 @@
 //
 
 #include "DataTypes.hpp"
-import DataTypes.Statement;
+
 
 
 Statement prepare(StatementType statementType, std::string statement) {
 
-    return PREPARE_SUCCESS;
+    return Statement{statementType, statement};
 }

@@ -4,7 +4,8 @@
 
 #ifndef DATATYPES_H
 #define DATATYPES_H
-#include <bits/locale_facets_nonio.h>
+#include <string>
+
 
 typedef enum {
     SELECT_STATEMENT,
@@ -19,6 +20,7 @@ typedef struct {
     StatementType type;
     std::string statement;
 } Statement;
+
 
 
 #endif //DATATYPES_H
