@@ -1,11 +1,9 @@
 #include <fstream>
 #include <iostream>
+#include "CliDataTypes/DataTypes.hpp"
 
-enum InputType {
-    EXIT,
-    HELP,
-    OTHER
-};
+
+
 
 
 int main() {
@@ -15,18 +13,34 @@ int main() {
         std::cout << "Please enter a command: (exit, help)\n";
         std::getline(std::cin, input);
 
-        switch (input) {
-            case EXIT:
+        if (input.at(0) == '-') {
+            if (input == "-exit") {
                 return EXIT_SUCCESS;
-
-            case HELP: {
+            } else if (input == "-help") {
                 std::cout << "Syntax TBD";
-                break;
+                continue;
+            } else if (input == "-query") {
+                std::cout << "Syntax TBD";
+                continue;
             }
-
-            case OTHER:
-                break;
+            continue;
+        } else {
+            std::cout << "Unknown command: " << input << "\n";
         }
+/*
+        Statement statement;
+
+        switch (prepare_statement(input, statement)) {
+            case (PREPARE_SUCCESS):
+                break;
+
+            case (PREPARE_UNRECOGNIZED_STATEMENT):
+                std::cout << "unrecognized keyword at the start of '%s'.\n" << input;
+                continue;
+        }
+
+        execute_statement(statement);
+        std::cout << "Executed.\n"; */
     }
 
     return 0;
