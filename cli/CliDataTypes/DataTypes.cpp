@@ -6,7 +6,7 @@
 
 
 
-Statement prepare(StatementType statementType, std::string statement) {
+Statement prepare(const StatementType statementType, std::string statement) {
 
     return Statement{statementType, statement};
 }
