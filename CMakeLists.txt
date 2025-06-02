@@ -12,7 +12,9 @@ add_executable(sqlite-clone cli/main.cpp
         cli/CliCommand/ExitCommand.cpp
         cli/CliCommand/ExitCommand.h
         cli/CliCommand/HelpCommand.cpp
-        cli/CliCommand/HelpCommand.h)
+        cli/CliCommand/HelpCommand.h
+        cli/CliLoop.cpp
+        cli/CliLoop.h)
 target_include_directories(sqlite-clone PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/cli")
 
 

@@ -4,7 +4,7 @@
 
 #include "HelpCommand.h"
 
-static std::string doHelp() {
+std::string doHelp() {
     return "need some help?";
 }
 

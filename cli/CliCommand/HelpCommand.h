@@ -16,7 +16,6 @@ public:
     HelpCommand() = default;
     ~HelpCommand() = default;
 
-    static std::string doHelp() {};
     //exceptions handled in the future
 
 

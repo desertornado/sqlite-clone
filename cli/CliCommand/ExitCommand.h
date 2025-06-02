@@ -14,7 +14,6 @@ public:
     ExitCommand() = default;
     ~ExitCommand() = default;
 
-    static int doExit() {};
 //exceptions handled in the future
 
 

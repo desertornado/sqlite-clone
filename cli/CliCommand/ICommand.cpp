@@ -9,15 +9,13 @@
 namespace cli {
 
 
-    int ICommand::doExit() -> int {
+    auto ICommand::doExit() -> int {
         return EXIT_SUCCESS;
     }
 
 
-    std::string ICommand::doHelp() -> std::string {
+    auto ICommand::doHelp() -> std::string {
         return "Need some help?";
     }
-
-
 }
 
