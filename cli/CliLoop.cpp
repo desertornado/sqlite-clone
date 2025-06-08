@@ -6,8 +6,8 @@
 
 #include <iostream>
 
-#include "CliCommand/ExitCommand.h"
-#include "CliCommand/HelpCommand.h"
+#include "Command/ExitCommand.h"
+#include "Command/HelpCommand.h"
 
 namespace cli {
 
