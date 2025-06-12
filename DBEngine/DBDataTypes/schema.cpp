@@ -4,31 +4,40 @@
 
 #include "schema.h"
 #include "Utils.h"
-#include <cstdint>
 #include <string>
+#include <bits/shared_ptr_base.h>
 
 /**
  *
  */
 
-#define COLUMN_USERNAME_SIZE 32
-#define COLUMN_EMAIL_SIZE 255
+#define COLUMN_NAME_SIZE 32
+#define COLUMN_SIZE 255
 
 
 typedef struct {
     std::uint32_t table_id;
-    std::string schema_name;
+    std::string table_name;
 
-    template<typename... Types>
     class Column {
     private:
-        template<typename... Types>
-        class ColumnnElement {
+        uid_t col_uid = Utils::generate_random();
+        std::string col_name;
+
+        bool c_is_pk;
+        std::__shared_ptr<Column> col_fk_referenceto;
+
+        /***
+         * IDFK how to define ts fn
+         */
+        std::byte col_values[];
+
+    };
+
+    class Row {
         private:
-            // Class Members for Each Type
-        public:
-            // Constructor and Methods
-        };
+        uid_t row_uid = Utils::generate_random();
+        std::byte value[];
     };
 } Table;
 
@@ -38,6 +47,4 @@ explicit schema(std::string new_schema_name)
     table_id = set_uid();
 }*/
 
-uint32_t set_uid() {
-    return Utils::generate_random();
-}
+
