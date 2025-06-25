@@ -26,9 +26,10 @@ private:
     std::shared_ptr<data_base> db;
 
 public:
+    //normal flow will use some antipatterns to achieve faster memory usage
     DataBase(const data_base &filled_data) {
-        // TBD, excpetion maybe? Custom one?
 
+        // TBD, excpetion maybe? Custom one?
         if (filled_data.db_path.empty() || filled_data.db_name.empty() || filled_data.schemas.at(0) == nullptr)
             throw new std::exception;
 
@@ -45,7 +46,7 @@ public:
             throw new std::exception;
 
 
-        //normal flow will use some antipattern to achieve faster memory usage
+
         new_db = std::shared_ptr<data_base>();
         new_db.get()->db_name = filled_data.db_name;
         db = std::make_shared<data_base>(filled_data);
