@@ -14,6 +14,9 @@
 #define COLUMN_NAME_SIZE 32
 #define COLUMN_SIZE 255
 
+std::string schema_name = "";
+
+std::uint32_t schema_id;
 
 typedef struct {
     std::uint32_t table_id;

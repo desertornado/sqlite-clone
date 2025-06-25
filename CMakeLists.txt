@@ -28,7 +28,9 @@ add_executable(sqlite-clone cli/main.cpp
         DBEngine/Parser/Parser.cpp
         DBEngine/Parser/Parser.h
         DBEngine/DBCommands/QueryCommands/QueryInsertIntoCommand.cpp
-        DBEngine/DBCommands/QueryCommands/QueryInsertIntoCommand.h)
+        DBEngine/DBCommands/QueryCommands/QueryInsertIntoCommand.h
+        DBEngine/DataBase.cpp
+        DBEngine/DataBase.h)
 target_include_directories(sqlite-clone PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/cli")
 
 
