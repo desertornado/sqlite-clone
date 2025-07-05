@@ -36,20 +36,16 @@ public:
         std::shared_ptr<data_base> new_db = std::shared_ptr<data_base>();
 
         if (filled_data.db_name.data())
-            new_db->data_base->db_name = filled_data.db_name;
+            new_db.get()->db_name = filled_data.db_name;
         else
             throw new std::exception;
 
         if (filled_data.schemas.data())
-            new_db->data_base->schemas = filled_data.schemas;
+            new_db.get()->schemas = filled_data.schemas;
         else
             throw new std::exception;
 
 
-
-        new_db = std::shared_ptr<data_base>();
-        new_db.get()->db_name = filled_data.db_name;
-        db = std::make_shared<data_base>(filled_data);
     };
 
     ~DataBase() {
