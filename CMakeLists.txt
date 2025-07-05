@@ -15,22 +15,24 @@ add_executable(sqlite-clone cli/main.cpp
         cli/Command/HelpCommand.h
         cli/CliLoop.cpp
         cli/CliLoop.h
-        DBEngine/DBDataTypes/schema.cpp
-        DBEngine/DBDataTypes/schema.h
-        DBEngine/DBDataTypes/Utils.cpp
-        DBEngine/DBDataTypes/Utils.h
-        DBEngine/DBCommands/ConnectCommand.cpp
-        DBEngine/DBCommands/ConnectCommand.h
-        DBEngine/DBCommands/QueryCommands/QuerySelectCommand.cpp
-        DBEngine/DBCommands/QueryCommands/QuerySelectCommand.h
-        DBEngine/DBCommands/CommitCommand.cpp
-        DBEngine/DBCommands/CommitCommand.h
-        DBEngine/Parser/Parser.cpp
-        DBEngine/Parser/Parser.h
-        DBEngine/DBCommands/QueryCommands/QueryInsertIntoCommand.cpp
-        DBEngine/DBCommands/QueryCommands/QueryInsertIntoCommand.h
-        DBEngine/DataBase.cpp
-        DBEngine/DataBase.h)
+        DBEngine/src/DBDataTypes/schema.cpp
+        DBEngine/src/DBDataTypes/schema.h
+        DBEngine/src/DBDataTypes/Utils.cpp
+        DBEngine/src/DBDataTypes/Utils.h
+        DBEngine/src/DBCommands/ConnectCommand.cpp
+        DBEngine/src/DBCommands/ConnectCommand.h
+        DBEngine/src/DBCommands/QueryCommands/QuerySelectCommand.cpp
+        DBEngine/src/DBCommands/QueryCommands/QuerySelectCommand.h
+        DBEngine/src/DBCommands/CommitCommand.cpp
+        DBEngine/src/DBCommands/CommitCommand.h
+        DBEngine/src/Parser/Parser.cpp
+        DBEngine/src/Parser/Parser.h
+        DBEngine/src/DBCommands/QueryCommands/QueryInsertIntoCommand.cpp
+        DBEngine/src/DBCommands/QueryCommands/QueryInsertIntoCommand.h
+        DBEngine/src/DataBase.cpp
+        DBEngine/src/DataBase.h
+        DBEngine/tests/MockDs/Simple_R_W_Op_Small_DB.cpp
+        DBEngine/tests/MockDs/Simple_R_W_Op_Small_DB.h)
 target_include_directories(sqlite-clone PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/cli")
 
 
