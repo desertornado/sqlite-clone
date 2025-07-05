@@ -45,6 +45,8 @@ public:
         for (std::string row_value : row_values) {
             mc.column_value.append(row_value);
         }
+        mt.table_name = "singleton mock table";
+        mt.columns.push_back(mc);
     }
 
     ~Simple_R_W_Op_Small_DB();
