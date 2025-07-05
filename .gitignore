@@ -32,3 +32,9 @@
 *.out
 *.app
 
+/.idea/editor.xml
+/main
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/untitled1.iml
+/.idea/vcs.xml
